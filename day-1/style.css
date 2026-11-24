@@ -1,0 +1,277 @@
+/*========baisc settings========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*========body settings========*/
+body {
+    min-height: 100vh;
+    background-color: #3154c9;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+/*========header settings========*/
+header {
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 58px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+/*========logo settings========*/
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+.logo-dot {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+}
+/*========menu settings========*/
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+}
+.menu span {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    display: block;
+}
+/*========main layout========*/
+main {
+    min-height: calc(100vh - 170px);
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    padding-right: 55px;
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+}
+/*========main heading========*/
+.intro h1{
+    font-size: clamp(48px, 5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 50px;
+}
+/*========intro paragraph========*/
+.intro p {
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+}
+/*========stats section========*/
+.statistics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+/*========stat box========*/
+.stat-box {
+    min-height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 38px;
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+/* remove right border from roght boxes */
+.stat-box:nth-child(2),
+.stat-box:nth-child(4) {
+    border-right: none;
+}
+/* remove bottom border from bottom boxes */
+.stat-box:nth-child(3),
+.stat-box:nth-child(4) {
+    border-bottom: none;
+}
+/*========stat top section========*/
+.stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.icon {
+    font-size: 40px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1;
+}
+/* NUMBER */
+.number {
+    font-size: clamp(42px, 4vw, 58px);
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+/* ========================================
+   BOTTOM AREA OF STAT BOX
+======================================== */
+
+.stat-bottom h2 {
+    font-size: 21px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 0.2px;
+}
+
+
+.stat-bottom p {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    min-height: 82px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 58px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   TABLET RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1000px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+
+    .intro {
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+        min-height: 500px;
+    }
+
+
+    .stat-box {
+        min-height: 320px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 650px) {
+
+    header {
+        height: 75px;
+
+        padding: 0 25px;
+    }
+
+
+    .logo {
+        font-size: 16px;
+    }
+
+
+    .intro {
+        padding: 70px 25px;
+    }
+
+
+    .intro h1 {
+        font-size: 52px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .intro p {
+        font-size: 17px;
+    }
+
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+
+    .stat-box {
+        min-height: 280px;
+
+        padding: 30px 25px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+
+    .stat-box:nth-child(4) {
+        border-bottom: none;
+    }
+
+
+    .number {
+        font-size: 48px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        padding: 25px;
+
+        font-size: 14px;
+    }
+
+}
